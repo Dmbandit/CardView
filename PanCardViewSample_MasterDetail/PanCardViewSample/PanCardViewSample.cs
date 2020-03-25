@@ -12,7 +12,8 @@ namespace PanCardViewSample
                 MainPage = new Views.Gtk.CoverFlowSampleXamlView();
                 return;
             }
-            MainPage = new NavigationPage(new StartPage());
+			//MainPage = new NavigationPage(new StartPage());
+			MainPage = new MasterDetailPage1();
 		}
 	}
 
