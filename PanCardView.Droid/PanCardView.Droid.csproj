@@ -1,5 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\PanCardViewSample_MasterDetail\packages\Xamarin.Forms.4.5.0.396\build\Xamarin.Forms.props" Condition="Exists('..\PanCardViewSample_MasterDetail\packages\Xamarin.Forms.4.5.0.396\build\Xamarin.Forms.props')" />
   <Import Project="..\PanCardViewSample\packages\Xamarin.Forms.4.4.0.991265\build\Xamarin.Forms.props" Condition="Exists('..\PanCardViewSample\packages\Xamarin.Forms.4.4.0.991265\build\Xamarin.Forms.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -14,6 +15,8 @@
     <AndroidResgenClass>Resource</AndroidResgenClass>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -36,6 +39,9 @@
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FormsViewGroup, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\PanCardViewSample_MasterDetail\packages\Xamarin.Forms.4.5.0.396\lib\MonoAndroid90\FormsViewGroup.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -97,21 +103,6 @@
     <Reference Include="Xamarin.Android.Support.Vector.Drawable">
       <HintPath>..\PanCardViewSample\packages\Xamarin.Android.Support.Vector.Drawable.28.0.0.3\lib\monoandroid90\Xamarin.Android.Support.Vector.Drawable.dll</HintPath>
     </Reference>
-    <Reference Include="FormsViewGroup">
-      <HintPath>..\PanCardViewSample\packages\Xamarin.Forms.4.4.0.991265\lib\MonoAndroid90\FormsViewGroup.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Forms.Core">
-      <HintPath>..\PanCardViewSample\packages\Xamarin.Forms.4.4.0.991265\lib\MonoAndroid90\Xamarin.Forms.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Forms.Platform.Android">
-      <HintPath>..\PanCardViewSample\packages\Xamarin.Forms.4.4.0.991265\lib\MonoAndroid90\Xamarin.Forms.Platform.Android.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Forms.Platform">
-      <HintPath>..\PanCardViewSample\packages\Xamarin.Forms.4.4.0.991265\lib\MonoAndroid90\Xamarin.Forms.Platform.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Forms.Xaml">
-      <HintPath>..\PanCardViewSample\packages\Xamarin.Forms.4.4.0.991265\lib\MonoAndroid90\Xamarin.Forms.Xaml.dll</HintPath>
-    </Reference>
     <Reference Include="Java.Interop" />
     <Reference Include="Xamarin.Android.Arch.Core.Runtime">
       <HintPath>..\PanCardViewSample\packages\Xamarin.Android.Arch.Core.Runtime.1.1.1.3\lib\monoandroid90\Xamarin.Android.Arch.Core.Runtime.dll</HintPath>
@@ -172,6 +163,18 @@
     </Reference>
     <Reference Include="Xamarin.Android.Support.CustomTabs">
       <HintPath>..\PanCardViewSample\packages\Xamarin.Android.Support.CustomTabs.28.0.0.3\lib\monoandroid90\Xamarin.Android.Support.CustomTabs.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\PanCardViewSample_MasterDetail\packages\Xamarin.Forms.4.5.0.396\lib\MonoAndroid90\Xamarin.Forms.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\PanCardViewSample_MasterDetail\packages\Xamarin.Forms.4.5.0.396\lib\MonoAndroid90\Xamarin.Forms.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform.Android, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\PanCardViewSample_MasterDetail\packages\Xamarin.Forms.4.5.0.396\lib\MonoAndroid90\Xamarin.Forms.Platform.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Xaml, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\PanCardViewSample_MasterDetail\packages\Xamarin.Forms.4.5.0.396\lib\MonoAndroid90\Xamarin.Forms.Xaml.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -245,4 +248,12 @@
   <Import Project="..\PanCardViewSample\packages\Xamarin.Android.Support.Design.28.0.0.3\build\monoandroid90\Xamarin.Android.Support.Design.targets" Condition="Exists('..\PanCardViewSample\packages\Xamarin.Android.Support.Design.28.0.0.3\build\monoandroid90\Xamarin.Android.Support.Design.targets')" />
   <Import Project="..\PanCardViewSample\packages\Xamarin.Android.Support.v7.MediaRouter.28.0.0.3\build\monoandroid90\Xamarin.Android.Support.v7.MediaRouter.targets" Condition="Exists('..\PanCardViewSample\packages\Xamarin.Android.Support.v7.MediaRouter.28.0.0.3\build\monoandroid90\Xamarin.Android.Support.v7.MediaRouter.targets')" />
   <Import Project="..\PanCardViewSample\packages\Xamarin.Forms.4.4.0.991265\build\Xamarin.Forms.targets" Condition="Exists('..\PanCardViewSample\packages\Xamarin.Forms.4.4.0.991265\build\Xamarin.Forms.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\PanCardViewSample_MasterDetail\packages\Xamarin.Forms.4.5.0.396\build\Xamarin.Forms.props')" Text="$([System.String]::Format('$(ErrorText)', '..\PanCardViewSample_MasterDetail\packages\Xamarin.Forms.4.5.0.396\build\Xamarin.Forms.props'))" />
+    <Error Condition="!Exists('..\PanCardViewSample_MasterDetail\packages\Xamarin.Forms.4.5.0.396\build\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\PanCardViewSample_MasterDetail\packages\Xamarin.Forms.4.5.0.396\build\Xamarin.Forms.targets'))" />
+  </Target>
+  <Import Project="..\PanCardViewSample_MasterDetail\packages\Xamarin.Forms.4.5.0.396\build\Xamarin.Forms.targets" Condition="Exists('..\PanCardViewSample_MasterDetail\packages\Xamarin.Forms.4.5.0.396\build\Xamarin.Forms.targets')" />
 </Project>
